@@ -206,10 +206,10 @@ html.js.motore-ko #nomotore{display:block}
 <header class="hero">
   <div class="kicker">Strumento · Scompenso avanzato · ESC 2026</div>
   <h1 class="headline">Scompenso avanzato — i quattro criteri, il triage, il percorso</h1>
-  <p class="lede"><strong>Come si usa.</strong> Il passo 1 verifica i <strong>quattro criteri</strong> della Tab. 14: servono <strong>tutti</strong>, nonostante FMT, AMT e GDIT. Il passo 2 è il <strong>triage</strong> della Fig. 16: chi va riferito subito, chi si riferisce per i criteri di alto rischio, chi resta in gestione locale. Il passo 3 traduce il <strong>profilo INTERMACS</strong> nel percorso della Fig. 18. <strong>Azzera</strong>, in alto, ricomincia.</p>
+  <p class="lede"><strong>Come si usa.</strong> Il passo 1 verifica i <strong>quattro criteri</strong> della Tab. 14: servono <strong>tutti</strong>, nonostante FMT, AMT e GDIT. Il passo 2 è il <strong>triage</strong> della Fig. 16: chi va riferito subito, chi si riferisce per i criteri di alto rischio, chi resta in gestione locale. Il passo 3 traduce il <strong>profilo INTERMACS</strong> nel percorso della Fig. 18, e le <strong>controindicazioni</strong>, lette per terapia, lo governano. <strong>Azzera</strong>, in alto, ricomincia.</p>
   <div class="meta-row">
     <span class="meta-chip"><strong>Fonte</strong> 2026 ESC Guidelines for the management of heart failure</span>
-    <span class="meta-chip"><strong>Da</strong> Tab. 14 (p. 52) · Fig. 16 e Tab. 15 (p. 53) · Fig. 17 (p. 55) · Fig. 18 (p. 56) · Tab. 16 (p. 57) · Tab. 17 (p. 58)</span>
+    <span class="meta-chip"><strong>Da</strong> Tab. 14 (p. 52) · Fig. 16 e Tab. 15 (p. 53) · Fig. 17 (p. 55) · Fig. 18 (p. 56) · Tab. 16 (p. 57) · Tab. 17 (p. 58) · Tab. S19 e S20 del supplementare (p. 29)</span>
     <span class="meta-chip"><strong>Non</strong> decide la candidabilità: la stabilisce il centro</span>
   </div>
 </header>
@@ -303,7 +303,7 @@ html.js.motore-ko #nomotore{display:block}
 
 <div class="card" id="outTriage"></div>
 
-<div class="stage"><span class="stage-n">3</span><span class="stage-t">Il percorso</span><span class="stage-w">Fig. 17, p. 55 · Fig. 18, p. 56 · Tab. 16, p. 57</span></div>
+<div class="stage"><span class="stage-n">3</span><span class="stage-t">Il percorso</span><span class="stage-w">Fig. 17, p. 55 · Fig. 18, p. 56 · Tab. 16, p. 57 · Tab. 17, p. 58</span></div>
 
 <div class="card">
   <div class="row">
@@ -322,8 +322,21 @@ html.js.motore-ko #nomotore{display:block}
   <div class="row">
     <label class="chk" style="border:none"><input type="checkbox" id="recupero"><span>Profilo 1 o 2 con recupero neurologico e d'organo, ma <b>non</b> cardiaco, su MCS temporaneo</span></label>
   </div>
-  <div class="row">
-    <label class="chk" style="border:none"><input type="checkbox" id="controind"><span>Controindicazioni assolute a MCS durevole o trapianto<small>da verificare sulle Tab. 16 e 17: disfunzione VD severa nonostante euvolemia, malattia d'organo irreversibile severa, malattia neurologica o polmonare severa, controindicazione all'anticoagulazione a lungo termine, non aderenza o limitazioni psicosociali; per il trapianto anche neoplasia, BMI &gt;35 o cachessia severa, abuso di alcol o sostanze o fumo negli ultimi 6 mesi</small></span></label>
+</div>
+
+<div class="card">
+  <h3>Controindicazioni, per terapia <span class="pgh">Tab. 16, p. 57 · Tab. 17, p. 58</span></h3>
+  <div class="muted" style="font-size:13px;margin-bottom:6px">Le due tabelle non coincidono: una controindicazione assoluta all'LVAD non lo è per forza al trapianto, e viceversa. Si segna solo ciò che è accertato: nel dubbio valuta il centro.</div>
+  <div class="due">
+    <div>
+      <label class="chk"><input type="checkbox" id="ciLvadAss"><span><b>LVAD</b>: controindicazioni assolute<small>disfunzione severa del ventricolo destro nonostante l'euvolemia · malattia renale e/o epatica severa e irreversibile · malattia neurologica severa e irreversibile · malattia polmonare severa · controindicazione all'anticoagulante orale a lungo termine · non aderenza o altri limiti psicosociali · supporto sociale insufficiente per le cure ambulatoriali · instabilità psicologica che compromette il follow-up</small></span></label>
+      <label class="chk"><input type="checkbox" id="ciLvadRel"><span><b>LVAD</b>: controindicazioni relative<small>obesità o malnutrizione · malattia muscoloscheletrica che ostacola la riabilitazione · neoplasia, secondo tipo e prognosi · arteriopatia periferica severa · infezione sistemica · alcol o sostanze negli ultimi 6 mesi, o fumo attivo · deficit cognitivo · fragilità</small></span></label>
+    </div>
+    <div>
+      <label class="chk"><input type="checkbox" id="ciTxAss"><span><b>Trapianto</b>: controindicazioni assolute<small>sono due: incapacità di seguire la terapia, per esempio per demenza · comorbidità gravi a prognosi infausta, che il trapianto non farebbe regredire</small></span></label>
+      <label class="chk"><input type="checkbox" id="ciTxAltre"><span><b>Trapianto</b>: altre controindicazioni<small>infezione attiva · arteriopatia periferica o cerebrovascolare severa · neoplasia · cirrosi o nefropatia irreversibile · malattia sistemica multiorgano · BMI &gt;35 kg/m² o cachessia severa · alcol, sostanze o fumo attivo negli ultimi 6 mesi · instabilità psicologica · supporto sociale insufficiente</small></span></label>
+      <label class="chk"><input type="checkbox" id="ciPvr"><span><b>Trapianto</b>: PVR elevate, irreversibili con i farmaci<small>anche questa fra le «altre», con una via sua: l'LVAD come ponte alla candidabilità. La fonte non dà una soglia</small></span></label>
+    </div>
   </div>
 </div>
 
@@ -334,7 +347,7 @@ html.js.motore-ko #nomotore{display:block}
 <div class="card"><h3>Limiti</h3><ul class="limiti" id="limiti"></ul></div>
 
 <div class="foot">
-  <strong>Fonte:</strong> 2026 ESC Guidelines for the management of heart failure — Tab. 14 (p. 52), Fig. 16 e Tab. 15 (p. 53), Recommendation Table 11 (pp. 53–54), Fig. 17 (p. 55), Fig. 18 (p. 56), Tab. 16 (p. 57), Tab. 17 (p. 58).<br><br>
+  <strong>Fonte:</strong> 2026 ESC Guidelines for the management of heart failure — Tab. 14 (p. 52), Fig. 16 e Tab. 15 (p. 53), Recommendation Table 11 (pp. 53–54), Fig. 17 (p. 55), Fig. 18 (p. 56), Tab. 16 (p. 57), Tab. 17 (p. 58), Recommendation Table 26 (p. 74); dati supplementari, Tab. S19 e S20 (p. 29).<br><br>
   Strumento personale di studio e consultazione: <strong>non sostituisce il giudizio clinico</strong> e non stabilisce la candidabilità a trapianto o assistenza ventricolare, che è del centro per lo scompenso avanzato.
 </div>
 
@@ -353,10 +366,40 @@ html.js.motore-ko #nomotore{display:block}
      - Fig. 17, p. 55 e Fig. 18, p. 56: profili INTERMACS e percorsi.
      - Tab. 16, p. 57: indicazioni al MCS durevole, fra cui «INTERMACS 2–4»
        e «INTERMACS 1–2 con recupero neurologico e d'organo ma non cardiaco
-       su MCS temporaneo». */
+       su MCS temporaneo».
+     Controindicazioni, lette per terapia:
+     - Tab. 16, p. 57, LVAD: otto assolute e otto relative.
+     - Tab. 17, p. 58, trapianto: due sole assolute; le altre non lo sono, e
+       quattro hanno una nota: infezione (b), PVR (c), neoplasia (d), cirrosi o
+       nefropatia irreversibile (e).
+     - p. 53: chi ha controindicazioni a MCS o trapianto va alle palliative; non
+       dice se assolute, ne' se ne basti una. Lo strumento lo fa scattare solo con
+       le assolute per ENTRAMBE: Tab. 17 nota c e Tab. S19 (suppl. p. 29) tengono
+       l'LVAD per chi non e' candidabile al trapianto, e la Tab. S20 (suppl. p. 29)
+       riconosce il fine vita con trapianto E MCS durevole esclusi.
+     Decisioni del medico del 01/11/2026:
+     - S18: trapianto chiuso e LVEF >30%. La Tab. 16, p. 57, chiede una LVEF
+       severamente ridotta senza un numero; il 30% e' del criterio 2 della Tab. 14,
+       p. 52: lettura dello strumento, dichiarata. Niente LVAD, decide il centro.
+     - S19: la Fig. 18 vale per lo scompenso avanzato secondo i criteri ESC/HFA
+       (didascalia, p. 56), e la Fig. 16, p. 53, porta l'aspettativa o la qualita' di
+       vita molto limitate alla gestione locale: in questi due casi LVAD e lista non
+       si propongono. Il MCS temporaneo dei profili 1-2 la p. 55 lo lega al profilo. */
   var MWT_SOGLIA = 300, PVO2_BASSO = 12, PVO2_ALTO = 14, PVO2_PC = 50, LVEF_C2 = 30;
 
   /* ═══ FUNZIONI PURE ═══════════════════════════════════════════════════ */
+
+  /* Che cosa resta aperto. Le assolute chiudono la sola terapia a cui si
+     riferiscono; relative e «altre» non chiudono niente. */
+  function vie(s) {
+    var lvad = !s.ciLvadAss, tx = !s.ciTxAss;
+    return {
+      lvad:lvad, tx:tx, chiuso:!lvad && !tx, una:lvad !== tx,
+      noLvef:lvad && !tx && s.lvef !== null && s.lvef > LVEF_C2,
+      dest:lvad && tx ? "LVAD e/o lista trapianto" : (tx ? "lista trapianto" : "LVAD"),
+      qualcuna:s.ciLvadAss || s.ciLvadRel || s.ciTxAss || s.ciTxAltre || s.ciPvr
+    };
+  }
 
   /* Criterio 1 — sintomi severi e persistenti, NYHA III o IV. */
   function crit1(s) { return s.nyha === null ? null : s.nyha >= 3; }
@@ -427,6 +470,10 @@ html.js.motore-ko #nomotore{display:block}
 
   function triage(s) {
     if (s.tLimit) return { esito:"locale", perche:"aspettativa di vita o qualità di vita molto limitate: la Fig. 16 porta alla gestione e alla rivalutazione periodica nel servizio locale, con le cure palliative quando servono" };
+    /* la Rec. Table 11 (p. 53) e p. 54 riservano il riferimento a chi non ha
+       controindicazioni assolute: con entrambe le terapie chiuse la consulenza
+       non ha oggetto, e l'altro riquadro della Fig. 16 e' la gestione locale */
+    if (vie(s).chiuso) return { esito:"locale", perche:"controindicazioni assolute sia all'LVAD sia al trapianto (passo 3): la consulenza della Rec. Table 11 è per chi non ne ha" };
     if (s.nyha === null) return { esito:null, perche:"serve la classe NYHA" };
     if (s.nyha >= 3) {
       if (!s.tGdit) return { esito:"attesa", perche:"NYHA III–IV: il riferimento diretto della Fig. 16 vale <b>nonostante</b> FMT, AMT e GDIT ottimali — segna la casella quando la terapia è ottimizzata" };
@@ -439,13 +486,43 @@ html.js.motore-ko #nomotore{display:block}
 
   /* Percorso della Fig. 18, per profilo INTERMACS. */
   function percorso(s) {
-    if (s.recupero) return { tipo:"lvad", testo:"Profilo 1–2 con recupero neurologico e d'organo ma non cardiaco su MCS temporaneo: è una delle indicazioni al <b>MCS durevole</b> della Tab. 16, e nella Fig. 18 porta a <b>LVAD e/o lista trapianto</b>", pag:"Tab. 16, p. 57 · Fig. 18, p. 56" };
+    var v = vie(s), d = "<b>" + v.dest + "</b>", av = avanzato(s), pr = parseInt(s.intermacs, 10) || 0;
+    /* Le assolute per entrambe governano tutto il resto: profilo e recupero non riaprono.
+       Ma la frase della p. 53 sta nel capitolo dello scompenso avanzato, e la Rec. Table 26
+       (p. 74) e la Tab. S20 (suppl. p. 29) parlano di chi ce l'ha: se il passo 1 dice
+       «non avanzato», le palliative non sono un esito. */
+    if (v.chiuso && avanzato(s).esito === false) return { tipo:"chiuso", testo:"Controindicazioni assolute <b>sia all'LVAD sia al trapianto</b>: le due terapie avanzate della Fig. 18 sono chiuse. Ma <b>al passo 1 lo scompenso non risulta avanzato</b>, e la frase della fonte sulle cure palliative parla dello scompenso avanzato: qui non è un esito", pag:"p. 53 · Tab. 14, p. 52" };
+    if (v.chiuso) return { tipo:"chiuso", testo:"Controindicazioni assolute <b>sia all'LVAD sia al trapianto</b>: le due terapie avanzate della Fig. 18 sono chiuse, e la fonte manda alle <b>cure palliative</b>", pag:"p. 53" };
+    /* S19: aspettativa o qualita' di vita molto limitate. */
+    if (s.tLimit) return { tipo:"limitato", fermo:true, testo:"Aspettativa o qualità di vita molto limitate (passo 2): la Fig. 16 porta alla gestione locale con rivalutazione periodica, non al centro. <b>LVAD e lista trapianto non si propongono</b>. Se la condizione non è accertata, togli la casella", pag:"Fig. 16, p. 53" };
+    /* S18: trapianto chiuso e LVEF oltre il 30%: l'LVAD non resta come uscita. */
+    if (v.noLvef) {
+      var noL = "Trapianto chiuso e LVEF " + nf(s.lvef) + "%: la <b>Tab. 16 non indica l'LVAD</b>, che chiede una LVEF severamente ridotta. <b>Decide il centro</b>";
+      var pgL = "Tab. 16, p. 57 · Tab. 14, p. 52";
+      if (s.recupero) return { tipo:"centro", testo:noL + ". Anche il recupero d'organo su MCS temporaneo è un'indicazione della Tab. 16 solo con quella LVEF", pag:pgL };
+      if (pr === 1) return { tipo:"temporaneo", testo:"Profilo 1: <b>MCS temporaneo</b>, supporto necessario <b>entro ore</b>, come ponte alla decisione o al recupero. " + noL, pag:"Fig. 17, p. 55 · Fig. 18, p. 56 · " + pgL };
+      if (pr === 2) return { tipo:"temporaneo", testo:"Profilo 2: <b>MCS temporaneo</b> (supporto entro pochi giorni), come ponte alla decisione o al recupero. L'altra uscita della Fig. 18 qui non c'è. " + noL, pag:"Fig. 18, p. 56 · " + pgL };
+      return { tipo:"centro", testo:(pr ? "Profilo " + pr + ". " : "") + noL, pag:pgL };
+    }
+    /* S19: il passo 1 dice «non avanzato». Il MCS temporaneo dei profili 1-2 resta. */
+    if (av.esito === false && (s.recupero || pr)) {
+      var nonA = "vale per lo scompenso avanzato secondo i criteri ESC/HFA, e al passo 1 <b>non risulta</b> (manca il criterio " + av.mancano.join(", ") + ")";
+      var pgA = "Fig. 18, didascalia, p. 56 · Tab. 14, p. 52";
+      if (!s.recupero && pr === 1) return { tipo:"temporaneo", fermo:true, testo:"Profilo 1: <b>MCS temporaneo</b>, supporto necessario <b>entro ore</b>, come ponte alla decisione o al recupero. Il resto della Fig. 18 " + nonA + ": <b>LVAD e lista trapianto non si propongono</b>", pag:"Fig. 17, p. 55 · " + pgA };
+      if (!s.recupero && pr === 2) return { tipo:"temporaneo", fermo:true, testo:"Profilo 2: <b>MCS temporaneo</b> (supporto entro pochi giorni). L'altra uscita della Fig. 18 " + nonA + ": <b>LVAD e lista trapianto non si propongono</b>", pag:pgA };
+      return { tipo:"nonav", fermo:true, testo:(s.recupero ? "Profilo 1–2 con recupero d'organo su MCS temporaneo: la Tab. 16 ne fa un'indicazione al MCS durevole, ma la Fig. 18 " : "Profilo " + pr + ": la Fig. 18 ") + nonA + ". <b>LVAD e lista trapianto non si propongono</b>: completa i criteri; il riferimento al centro lo dice il triage, al passo 2", pag:pgA };
+    }
+    if (s.recupero) return { tipo:"lvad", testo:v.lvad ?
+      "Profilo 1–2 con recupero neurologico e d'organo ma non cardiaco su MCS temporaneo: è una delle indicazioni al <b>MCS durevole</b> della Tab. 16, e nella Fig. 18 porta a " + d :
+      "Profilo 1–2 con recupero neurologico e d'organo ma non cardiaco su MCS temporaneo: la Tab. 16 ne fa un'indicazione al MCS durevole, che qui è chiuso, e nella Fig. 18 resta la " + d, pag:"Tab. 16, p. 57 · Fig. 18, p. 56" };
     if (s.intermacs === "") return { tipo:null, testo:"Scegli il profilo INTERMACS per vedere il percorso della Fig. 18", pag:"Fig. 17, p. 55" };
     var p = parseInt(s.intermacs, 10);
-    if (p === 1) return { tipo:"temporaneo", testo:"Profilo 1: <b>MCS temporaneo</b>, supporto necessario <b>entro ore</b>, come ponte alla decisione, al recupero, al MCS durevole o al trapianto urgente", pag:"Fig. 17, p. 55 · Fig. 18, p. 56" };
-    if (p === 2) return { tipo:"due", testo:"Profilo 2: la Fig. 18 ha <b>due uscite</b> — <b>MCS temporaneo</b> (supporto entro pochi giorni), oppure direttamente <b>LVAD e/o lista trapianto</b>", pag:"Fig. 18, p. 56 · Tab. 16, p. 57" };
-    if (p === 3 || p === 4) return { tipo:"lvad", testo:"Profilo " + p + ": <b>LVAD e/o lista trapianto</b>" + (p === 3 ? ", con tempistica elettiva, da settimane a mesi" : ""), pag:"Fig. 18, p. 56" };
-    return { tipo:"oltre4", testo:"Profilo " + p + ": la Fig. 18 chiede se il paziente è <b>ad alto rischio</b>. Se sì, <b>LVAD e/o lista trapianto</b>; se no, le terapie avanzate sono rinviabili, con follow-up molto ravvicinato", pag:"Fig. 18, p. 56" };
+    var ponti = "alla decisione, al recupero" + (v.lvad ? ", al MCS durevole" : "") + (v.tx ? " o al trapianto urgente" : "");
+    if (!v.tx) ponti = ponti.replace(", al MCS durevole", " o al MCS durevole");
+    if (p === 1) return { tipo:"temporaneo", testo:"Profilo 1: <b>MCS temporaneo</b>, supporto necessario <b>entro ore</b>, come ponte " + ponti, pag:"Fig. 17, p. 55 · Fig. 18, p. 56" };
+    if (p === 2) return { tipo:"due", testo:"Profilo 2: la Fig. 18 ha <b>due uscite</b> — <b>MCS temporaneo</b> (supporto entro pochi giorni), oppure direttamente " + d, pag:"Fig. 18, p. 56 · Tab. 16, p. 57" };
+    if (p === 3 || p === 4) return { tipo:"lvad", testo:"Profilo " + p + ": " + d + (p === 3 ? ", con tempistica elettiva, da settimane a mesi" : ""), pag:"Fig. 18, p. 56" };
+    return { tipo:"oltre4", testo:"Profilo " + p + ": la Fig. 18 chiede se il paziente è <b>ad alto rischio</b>. Se sì, " + d + (v.una ? "; se no, è rinviabile" : "; se no, le terapie avanzate sono rinviabili") + ", con follow-up molto ravvicinato", pag:"Fig. 18, p. 56" };
   }
 
   /* ═══ STATO E DISEGNO ═════════════════════════════════════════════════ */
@@ -460,13 +537,51 @@ html.js.motore-ko #nomotore{display:block}
   }
   function radio(n) { var e = document.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : ""; }
   function nf(v) { return String(Math.round(v * 100) / 100).replace(".", ","); }
-  function pgs(p) { return ' <span class="pg">' + p + "</span>"; }
+  /* ogni rimando resta intero, ma la riga va a capo fra un rimando e l'altro: a 390 e
+     320 px una fila di rimandi su una riga sola sfonda la colonna */
+  function pgs(p) {
+    var a = String(p).split(" · "), o = [];
+    for (var i = 0; i < a.length; i++) o.push('<span class="pg"' + (a[i].length > 30 ? ' style="white-space:normal"' : "") + ">" + a[i] + "</span>");
+    return " " + o.join(' <span class="pg">·</span> ');
+  }
   function corPill(c, l) { var k = { "I":"c1", "IIa":"c2a", "IIb":"c2b", "III":"c3" }[c]; return '<span class="cor ' + k + '">' + c + "</span>" + (l ? ' <span class="cor ' + k + '" style="opacity:.85">' + l + "</span>" : ""); }
   function nota(g, t) { return '<div class="nota ' + (g || "") + '">' + t + "</div>"; }
   function passo(i, t) { return '<div class="passo"><span class="ico">' + i + '</span><span class="tx">' + t + "</span></div>"; }
   function riga(ok, titolo, dettaglio) {
     var segno = ok === true ? "✓" : (ok === false ? "—" : "?");
     return '<div class="crit ' + (ok === true ? "si" : "no") + '"><span class="segno">' + segno + "</span><span>" + titolo + (dettaglio ? '<div class="muted" style="font-size:13px">' + dettaglio + "</div>" : "") + "</span></div>";
+  }
+
+  /* Le note delle controindicazioni, sotto il percorso. Nessuna senza una casella segnata. */
+  function noteCI(s, v, pc) {
+    var h = "", ignorate;
+    function notaAcuta(motivo) {
+      return nota("", "<b>Profilo 1–2:</b> il MCS temporaneo sta a monte di questa valutazione — come ponte alla decisione serve anche a escludere le controindicazioni al durevole" + pgs("Tab. S19, suppl. p. 29") + " — e " + motivo + " gli resterebbe il solo recupero. La fonte non dice se iniziarlo o proseguirlo in questo caso: se ne discute con lo Shock Team" + pgs("Fig. 18, nota a, p. 56") + ", con la strategia di sospensione già definita" + pgs("p. 55") + ".");
+    }
+    var acuto = s.recupero || s.intermacs === "1" || s.intermacs === "2";
+    if (v.chiuso) {
+      ignorate = s.ciLvadRel || s.ciTxAltre || s.ciPvr;
+      var avz = avanzato(s).esito;
+      if (avz === false) h += nota("", "Se i criteri del passo 1 diventano tutti e quattro, questo esito cambia. Le assolute sono quelle delle Tab. 16" + pgs("p. 57") + " e 17" + pgs("p. 58") + ": se una non è accertata, togli la casella, e la valutazione torna al centro." + (ignorate ? " Le altre caselle segnate non cambiano questo esito." : ""));
+      else h += nota("stop", "<b>Cure palliative</b>, con la pianificazione anticipata " + corPill("I", "B1") + " e il team palliativo integrato " + corPill("I", "B2") + pgs("Rec. Table 26, p. 74") + ". Trapianto e MCS durevole esclusi sono anche una delle voci con cui la fonte riconosce il fine vita" + pgs("Tab. S20, suppl. p. 29") + "." + (avz === null ? " La fonte lo dice dello scompenso avanzato, e al passo 1 i criteri sono ancora incompleti: vanno completati." : "") + " Le assolute sono quelle delle Tab. 16" + pgs("p. 57") + " e 17" + pgs("p. 58") + ": se una non è accertata, togli la casella, e la valutazione torna al centro." + (ignorate ? " Le altre caselle segnate non cambiano questo esito." : ""));
+      if (acuto) h += notaAcuta("con entrambe le terapie chiuse");
+      return h;
+    }
+    /* S19: il percorso non si apre, e le note per terapia direbbero «resta da valutare». */
+    if (pc.fermo) {
+      if (pc.tipo === "limitato" && acuto) h += notaAcuta("con l'aspettativa o la qualità di vita molto limitate");
+      if (v.qualcuna) h += nota("info", "Le controindicazioni segnate si rileggono se il percorso si apre: qui non cambiano questo esito.");
+      return h;
+    }
+    if (!v.lvad) h += nota("", "<b>LVAD chiuso</b> dalle sue assolute" + pgs("Tab. 16, p. 57") + ". <b>Il trapianto resta da valutare</b>: le due tabelle non coincidono, e la disfunzione severa del ventricolo destro o la controindicazione all'anticoagulante, per esempio, nella Tab. 17 non compaiono. Ma <b>malattia renale o epatica irreversibile, instabilità psicologica e supporto sociale insufficiente</b> stanno anche fra le «altre» della Tab. 17: se la ragione è una di queste, segna anche quella casella; se è la <b>non aderenza</b>, guarda le assolute del trapianto" + pgs("p. 58") + "." + (s.ciLvadRel ? " Le relative segnate non cambiano questo esito." : ""));
+    if (v.noLvef) h += nota("", "<b>Trapianto chiuso</b> dalle sue assolute" + pgs("Tab. 17, p. 58") + ". La Tab. 16 chiede una LVEF severamente ridotta senza dare un numero" + pgs("p. 57") + ": la soglia del 30% è quella del criterio 2 della Tab. 14" + pgs("p. 52") + ", e usarla qui è una <b>lettura dello strumento</b>. Se la ragione è l'<b>incapacità di seguire la terapia</b>, la non aderenza è assoluta anche per l'LVAD" + pgs("Tab. 16, p. 57") + ": segna anche quella casella." + (s.ciLvadRel || s.ciTxAltre || s.ciPvr ? " Le altre caselle segnate non cambiano questo esito." : ""));
+    else if (!v.tx) h += nota("", "<b>Trapianto chiuso</b> dalle sue assolute" + pgs("Tab. 17, p. 58") + ". <b>L'LVAD resta da valutare</b>, come terapia di destinazione o ponte al recupero" + pgs("Rec. Table 13, p. 57 · Tab. S19, suppl. p. 29") + ", e presuppone una LVEF severamente ridotta" + pgs("Tab. 16, p. 57") + ". Se la ragione è l'<b>incapacità di seguire la terapia</b>, la non aderenza è assoluta anche per l'LVAD" + pgs("Tab. 16, p. 57") + ": segna anche quella casella." + (s.ciTxAltre || s.ciPvr ? " Le «altre» e le PVR segnate non cambiano questo esito." : ""));
+    if (s.ciLvadRel && v.lvad && !v.noLvef) h += nota("info", "<b>Relative all'LVAD</b>: non chiudono il percorso, le pesa il centro" + pgs("Tab. 16, p. 57") + ".");
+    if (s.ciTxAltre && v.tx) h += nota("info", "<b>Altre controindicazioni al trapianto</b>: non chiudono il percorso, la valutazione è del centro" + pgs("Tab. 17, p. 58") + ". Tre voci hanno una via scritta: <b>infezione attiva</b>, che è relativa, e un LVAD infetto può essere un'indicazione (nota b); <b>neoplasia</b>, casi molto selezionati, con l'oncologo (nota d); <b>cirrosi o nefropatia irreversibile</b>, si può considerare il trapianto combinato (nota e).");
+    if (s.ciPvr && v.tx && v.lvad) h += nota("info", "<b>PVR elevate e irreversibili con i farmaci</b>: non chiudono il percorso. Si consideri l'<b>LVAD come ponte alla candidabilità</b>" + pgs("Tab. 17, nota c, p. 58 · Tab. S19, suppl. p. 29") + (s.ciLvadRel ? ": con le relative segnate, lo pesa il centro" : "") + ".");
+    if (s.ciPvr && v.tx && !v.lvad) h += nota("", "<b>PVR elevate e irreversibili con i farmaci</b>: la via della nota c passa dall'LVAD, che qui è chiuso. Il trapianto resta con una controindicazione non assoluta e senza quel ponte: decide il centro" + pgs("Tab. 17, nota c, p. 58") + ".");
+    if (v.qualcuna) h += nota("info", "Pianificazione anticipata e cure palliative <b>accompagnano</b> ogni percorso, qualunque sia la strategia: non aspettano che si chiuda" + pgs("Fig. 18, p. 56 · p. 53") + ".");
+    return h;
   }
 
   function S() {
@@ -477,14 +592,15 @@ html.js.motore-ko #nomotore{display:block}
       c3due:ck("c3due"), c3ino:ck("c3ino"), c4nex:ck("c4nex"),
       tLimit:ck("tLimit"), tGdit:ck("tGdit"),
       r3hfh:ck("r3hfh"), r3diur:ck("r3diur"), r3neuro:ck("r3neuro"),
-      intermacs:el("intermacs").value, recupero:ck("recupero"), controind:ck("controind")
+      intermacs:el("intermacs").value, recupero:ck("recupero"),
+      ciLvadAss:ck("ciLvadAss"), ciLvadRel:ck("ciLvadRel"), ciTxAss:ck("ciTxAss"), ciTxAltre:ck("ciTxAltre"), ciPvr:ck("ciPvr")
     };
     for (var i = 1; i <= 9; i++) s["h" + i] = ck("h" + i);
     return s;
   }
 
   function disegna() {
-    var s = S();
+    var s = S(), vi = vie(s);
 
     /* 1 · criteri */
     var c1 = crit1(s), c2 = crit2(s), c3 = crit3(s), c4 = crit4(s), av = avanzato(s);
@@ -506,36 +622,44 @@ html.js.motore-ko #nomotore{display:block}
     else if (tr.esito === "riferire") {
       h2 += '<div class="esito"><span class="cat k4">riferire o discutere col centro</span></div><div class="muted" style="margin-top:4px">' + tr.perche + "</div>";
       h2 += passo("→", "Consulenza precoce con un centro per lo scompenso avanzato, nei pazienti motivati e senza controindicazioni assolute " + corPill("I", "A") + pgs("Rec. Table 11, p. 53"));
+      if (vi.noLvef) h2 += nota("info", "Trapianto chiuso e LVAD non indicato dalla Tab. 16 con questa LVEF (passo 3): la consulenza serve a far decidere il centro. È una lettura dello strumento.");
+      else if (vi.una) h2 += nota("info", "Una sola terapia è chiusa (passo 3): la consulenza serve per l'altra. La raccomandazione nomina trapianto o MCS durevole senza dire se ne basti una: è una lettura dello strumento.");
     } else if (tr.esito === "attesa") {
       h2 += '<div class="esito"><span class="cat k2">prima ottimizza</span></div><div class="muted" style="margin-top:4px">' + tr.perche + "</div>";
     } else {
       h2 += '<div class="esito"><span class="cat k1">gestione locale, con rivalutazione periodica</span></div><div class="muted" style="margin-top:4px">' + tr.perche + "</div>";
-      if (s.tLimit) h2 += passo("→", "Quando MCS e trapianto sono controindicati, la fonte manda alle <b>cure palliative</b>" + pgs("p. 53") + ", e la discussione proattiva su traiettoria e obiettivi di cura è " + corPill("I", "B1") + pgs("p. 74"));
+      if (s.tLimit || (vi.chiuso && av.esito !== false)) h2 += passo("→", "Quando MCS e trapianto sono controindicati, la fonte manda alle <b>cure palliative</b>" + pgs("p. 53") + ", e la discussione proattiva su traiettoria e obiettivi di cura è " + corPill("I", "B1") + pgs("p. 74"));
     }
     var ar = altoRischio(s);
-    if (s.nyha !== null && s.nyha < 3 && !s.tLimit)
+    if (s.nyha !== null && s.nyha < 3 && !s.tLimit && !vi.chiuso)
       h2 += nota("info", "In NYHA I–II il riferimento passa dai criteri di alto rischio: ne basta <b>uno</b> fra «Rule of three» e «I NEED HELP»" + pgs("Tab. 15, p. 53") + ". Segnati ora: " + (ar.ok ? ar.r3.concat(ar.hp).join(" · ") : "nessuno") + ".");
     el("outTriage").innerHTML = h2;
 
     /* 3 · percorso */
     var pc = percorso(s), h3 = "";
-    h3 += '<div class="esito"><span class="cat ' + (pc.tipo === null ? "kx" : (pc.tipo === "temporaneo" ? "k4" : (pc.tipo === "lvad" || pc.tipo === "due" ? "k3" : "k2"))) + '">' + (pc.tipo === null ? "percorso —" : "percorso Fig. 18") + "</span></div>";
+    h3 += '<div class="esito"><span class="cat ' + (pc.tipo === null ? "kx" : (pc.tipo === "temporaneo" || pc.tipo === "chiuso" ? "k4" : (pc.tipo === "lvad" || pc.tipo === "due" ? "k3" : "k2"))) + '">' + (pc.tipo === null ? "percorso —" : (pc.tipo === "chiuso" ? "percorso chiuso" : (pc.tipo === "limitato" || pc.tipo === "nonav" ? "percorso non aperto" : (pc.tipo === "centro" ? "decide il centro" : "percorso Fig. 18")))) + "</span></div>";
     h3 += '<div style="margin-top:6px">' + pc.testo + pgs(pc.pag) + "</div>";
     if (pc.tipo === "temporaneo" || pc.tipo === "due")
       h3 += passo("→", "Il <b>Shock Team multidisciplinare</b> è raccomandato nei candidati al MCS temporaneo, per scegliere modalità e tipo di device " + corPill("I", "C") + pgs("Rec. Table 10, p. 52"));
     if (pc.tipo === "lvad" || pc.tipo === "due" || pc.tipo === "oltre4") {
-      h3 += passo("→", "<b>LVAD</b> in pazienti selezionati con HFrEF avanzato nonostante FMT e GDIT, come ponte al trapianto, alla candidatura, al recupero o come terapia di destinazione " + corPill("I", "C") + pgs("Rec. Table 13, p. 57"));
-      h3 += passo("→", "<b>Trapianto cardiaco</b> in pazienti selezionati con HF avanzato refrattario a FMT e GDIT, senza controindicazioni " + corPill("I", "C") + pgs("Rec. Table 14, p. 58"));
+      if (vi.lvad) h3 += passo("→", "<b>LVAD</b> in pazienti selezionati con HFrEF avanzato nonostante FMT e GDIT, come " + (vi.tx ? "ponte al trapianto, alla candidatura, al recupero" : "ponte al recupero") + " o come terapia di destinazione " + corPill("I", "C") + pgs("Rec. Table 13, p. 57"));
+      if (vi.tx) h3 += passo("→", "<b>Trapianto cardiaco</b> in pazienti selezionati con HF avanzato refrattario a FMT e GDIT, senza controindicazioni " + corPill("I", "C") + pgs("Rec. Table 14, p. 58"));
     }
-    if (s.controind) h3 += nota("stop", "Sono segnate <b>controindicazioni assolute</b> a MCS durevole o trapianto: il percorso della Fig. 18 non si applica, e la fonte manda alle cure palliative" + pgs("p. 53") + ". L'elenco completo è nelle Tab. 16 (p. 57) e 17 (p. 58), e l'infezione attiva è una controindicazione <b>relativa</b> — un LVAD infetto può essere un'indicazione al trapianto" + pgs("p. 58") + ".");
+    h3 += noteCI(s, vi, pc);
     el("outPercorso").innerHTML = h3;
 
     /* 4 · valutazioni */
     var v = "";
-    v += passo("1", "<b>Consulenza precoce</b> con un centro per lo scompenso avanzato " + corPill("I", "A") + pgs("Rec. Table 11, p. 53"));
-    v += passo("2", "<b>Test cardiopolmonare da sforzo</b> nella valutazione per trapianto e MCS durevole " + corPill("I", "C") + pgs("Rec. Table 11, p. 53"));
-    v += passo("3", "<b>Cateterismo destro</b> nella stessa valutazione " + corPill("I", "C") + pgs("Rec. Table 11, p. 54"));
-    v += passo("4", "Nell'HFrEF avanzato con bassa portata e ipoperfusione: <b>inotropi continui</b> come ponte alla decisione, al trapianto o al MCS durevole " + corPill("IIa", "C") + pgs("p. 54") + "; e riduzione o sospensione di beta-bloccante o ivabradina in pazienti selezionati " + corPill("IIa", "C") + pgs("p. 54"));
+    if (vi.chiuso || s.tLimit) {
+      /* tutte e tre sono per la valutazione a trapianto e MCS durevole (Rec. Table 11) */
+      v += passo("—", "Consulenza, test cardiopolmonare e cateterismo destro servono alla valutazione per trapianto e MCS durevole: " + (vi.chiuso ? "con entrambe le terapie chiuse non si applicano" : "con l'aspettativa o la qualità di vita molto limitate, che la Fig. 16 porta alla gestione locale, non si applicano") + pgs("Rec. Table 11, pp. 53–54" + (vi.chiuso ? "" : " · Fig. 16, p. 53")));
+      v += passo("4", "Nell'HFrEF avanzato con bassa portata e ipoperfusione: <b>inotropi</b> come terapia palliativa dei sintomi, in chi non ha altre opzioni" + pgs("p. 54") + "; e riduzione o sospensione di beta-bloccante o ivabradina in pazienti selezionati " + corPill("IIa", "C") + pgs("p. 54"));
+    } else {
+      v += passo("1", "<b>Consulenza precoce</b> con un centro per lo scompenso avanzato " + corPill("I", "A") + pgs("Rec. Table 11, p. 53"));
+      v += passo("2", "<b>Test cardiopolmonare da sforzo</b> nella valutazione per trapianto e MCS durevole " + corPill("I", "C") + pgs("Rec. Table 11, p. 53"));
+      v += passo("3", "<b>Cateterismo destro</b> nella stessa valutazione " + corPill("I", "C") + pgs("Rec. Table 11, p. 54"));
+      v += passo("4", "Nell'HFrEF avanzato con bassa portata e ipoperfusione: <b>inotropi continui</b> come ponte alla decisione" + (vi.noLvef ? " " : (vi.lvad && vi.tx ? ", al trapianto o al MCS durevole " : (vi.tx ? " o al trapianto " : " o al MCS durevole "))) + corPill("IIa", "C") + pgs("p. 54") + "; e riduzione o sospensione di beta-bloccante o ivabradina in pazienti selezionati " + corPill("IIa", "C") + pgs("p. 54"));
+    }
     v += passo("5", "Sovraccarico refrattario: <b>terapia sostitutiva renale</b> con insufficienza renale terminale " + corPill("IIa", "C") + ", <b>ultrafiltrazione</b> se non risponde all'escalation diuretica " + corPill("IIb", "C") + pgs("p. 54"));
     el("valutazioni").innerHTML = v;
 
@@ -543,6 +667,10 @@ html.js.motore-ko #nomotore{display:block}
     lim.push("Il criterio 4 della Tab. 14 dà la pVO₂ come «<b>&lt;12–14 mL/kg/min</b>»: fra 12 e 14 la soglia non è unica, e lo strumento lascia la decisione a chi valuta. La Tab. 16 (p. 57) lega inoltre i criteri con «e/o» dove la Tab. 14 usa «o».");
     lim.push("Il <b>profilo INTERMACS</b> è un giudizio clinico: lo strumento non lo calcola, lo traduce in percorso.");
     lim.push("La <b>candidabilità</b> a trapianto o LVAD non si decide qui: le Tab. 16 e 17 elencano indicazioni e controindicazioni, e la valutazione è del centro.");
+    lim.push("<b>Le controindicazioni si leggono per terapia.</b> La fonte scrive che chi ha controindicazioni a MCS o trapianto riceve le cure palliative" + pgs("p. 53") + ", senza dire se assolute né se ne basti una. Lo strumento chiude il percorso solo con le assolute <b>per entrambe</b>: la Tab. 17 tiene l'LVAD come ponte alla candidabilità (nota c), la Tab. S19 come destinazione per chi non è candidabile al trapianto, e la Tab. S20 riconosce il fine vita con trapianto e MCS durevole esclusi entrambi" + pgs("suppl. p. 29") + ". È una lettura dello strumento, non una frase della fonte. E con i criteri del passo 1 non soddisfatti le palliative non sono un esito: la fonte parla dello scompenso avanzato.");
+    lim.push("<b>Trapianto chiuso e LVEF oltre il 30%:</b> la Tab. 16 chiede una LVEF severamente ridotta senza dare un numero" + pgs("p. 57") + "; il 30% è quello del criterio 2 della Tab. 14" + pgs("p. 52") + ". Lo strumento non propone l'LVAD e rimanda al centro: è una lettura dello strumento, non una frase della fonte.");
+    lim.push("<b>Quando il percorso non si apre.</b> La Fig. 18 vale per lo scompenso avanzato secondo i criteri ESC/HFA" + pgs("didascalia, p. 56") + ", e la Fig. 16 porta l'aspettativa o la qualità di vita molto limitate alla gestione locale" + pgs("p. 53") + ": in questi due casi LVAD e lista non si propongono. Al passo 1 una casella non spuntata vale «assente», quindi «non avanzato» può voler dire solo che i criteri non sono stati compilati. Nel «non avanzato» il MCS temporaneo dei profili 1–2 resta: la fonte lo lega al profilo" + pgs("p. 55") + ".");
+    lim.push("Con le assolute per entrambe, la fonte non dice che ne è del <b>MCS temporaneo</b> nel profilo 1–2, e la Tab. 17 non dà una <b>soglia</b> per le PVR elevate: lo strumento lo dichiara e non aggiunge numeri.");
     lim.push("Donne e minoranze socioculturali ricevono meno spesso MCS e trapianto per ragioni non spiegate da fattori medici: la fonte chiede attenzione in più al riferimento tempestivo" + pgs("p. 52") + ".");
     el("limiti").innerHTML = "<li>" + lim.join("</li><li>") + "</li>";
 
@@ -551,7 +679,7 @@ html.js.motore-ko #nomotore{display:block}
     chip("barAv", av.esito === true ? "k4" : (av.esito === false ? "k1" : "kx"), av.esito === true ? "sì" : (av.esito === false ? "no" : "—"));
     chip("barTr", tr.esito === "riferire" ? "k4" : (tr.esito === "locale" ? "k1" : (tr.esito === "attesa" ? "k2" : "kx")),
          tr.esito === "riferire" ? "riferire" : (tr.esito === "locale" ? "locale" : (tr.esito === "attesa" ? "ottimizza" : "—")));
-    chip("barPe", pc.tipo === null ? "kx" : "k3", pc.tipo === null ? "—" : (pc.tipo === "temporaneo" ? "MCS temporaneo" : (pc.tipo === "due" ? "due uscite" : (pc.tipo === "lvad" ? "LVAD / lista" : "dipende dal rischio"))));
+    chip("barPe", pc.tipo === null ? "kx" : (pc.tipo === "chiuso" ? "k4" : (pc.tipo === "limitato" || pc.tipo === "nonav" || pc.tipo === "centro" ? "k2" : "k3")), pc.tipo === null ? "—" : (pc.tipo === "chiuso" ? "chiuso" : (pc.tipo === "limitato" || pc.tipo === "nonav" ? "non aperto" : (pc.tipo === "centro" ? "decide il centro" : (pc.tipo === "temporaneo" ? "MCS temporaneo" : (pc.tipo === "due" ? "due uscite" : (pc.tipo === "lvad" ? (vi.lvad && vi.tx ? "LVAD / lista" : (vi.tx ? "lista" : "LVAD")) : "dipende dal rischio")))))));
   }
 
   document.addEventListener("input", disegna);
@@ -567,7 +695,7 @@ html.js.motore-ko #nomotore{display:block}
     window.scrollTo(0, 0);
   });
 
-  window.AVANZATO_MOTORE = { crit1:crit1, crit2:crit2, crit3:crit3, crit4:crit4, avanzato:avanzato, triage:triage, percorso:percorso, altoRischio:altoRischio };
+  window.AVANZATO_MOTORE = { crit1:crit1, crit2:crit2, crit3:crit3, crit4:crit4, avanzato:avanzato, triage:triage, percorso:percorso, altoRischio:altoRischio, vie:vie };
   disegna();
 })();
 </script>
